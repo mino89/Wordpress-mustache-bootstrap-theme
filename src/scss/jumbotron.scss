@@ -1,0 +1,30 @@
+.jumbotron{
+    color: $lights-color;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    h1{
+        font-weight: 700;
+        text-shadow: 1px 1px 1px $color-dark;
+        &:after{
+            content:'';
+            width: 25%;
+            border-bottom: 1px solid $lights-color;
+            padding-top:.5em;
+            display: flex;
+            margin: 0 auto;
+        }
+        &.remove-after{
+            &::after{
+                content:none;
+            }
+        }
+    }
+    h2{
+        padding: 1em 0;
+        text-shadow: 1px 1px 1px $color-dark;
+    }
+    .heading-card{
+        margin-bottom: -8rem;
+    }
+}

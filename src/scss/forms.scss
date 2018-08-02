@@ -1,0 +1,74 @@
+select{
+    color: $color-dark-light;
+    border: 1px solid;
+    background: $lights-color;
+    padding: 1rem;
+    margin: .5rem 0;
+     outline: none;
+}
+
+input{
+    color: $color-dark-light;
+    border: 1px solid;
+    background: $lights-color;
+    border-radius: .25em;
+    padding: .35em;
+    &::placeholder{
+        color: $color-dark-light; 
+    }
+}
+
+.full-width{
+    width: 100%;
+}
+
+.select-with-icon{
+    &.full-width{
+        display: flex;
+    }
+    &.remove-margin{
+        margin:.25rem 0;
+    }
+    color: $color-dark-light;
+    border: 1px solid;
+    background: $lights-color;
+    width: auto;
+    border-radius: .25em;
+    overflow: hidden;
+    display: inline-flex;
+    margin: .8rem 0;
+    cursor: pointer;
+    position: relative;
+    input,select{
+        border-radius: 0;
+        margin:0;
+        border:none;
+        margin:0;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-indent: 1px;
+        padding: .35rem;
+        text-overflow: '';
+    }
+    &.select-type{
+        select{
+            padding-right: 2.5rem;
+            background: transparent;
+            z-index: 1;
+            min-width: 13.25rem;
+        }
+        .select-icon{
+            position: absolute;
+            height: 100%;
+            right: 0;
+            z-index: 0;
+        }
+    }
+    .select-icon{
+        max-width: 2em;
+        display: flex;
+        align-items: center;
+        border-left: 1px solid;
+        padding: 0 .5em;
+    }
+}

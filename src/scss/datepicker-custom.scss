@@ -1,0 +1,74 @@
+.datepicker-top-left,
+.datepicker-top-right {
+  border-top-color: $color-action;
+  color: $lights-color;
+}
+
+.datepicker-top-left::before,
+.datepicker-top-right::before {
+  border-bottom-color: $color-action;
+}
+
+.datepicker-top-left::after,
+.datepicker-top-right::after {
+  border-bottom-color: $color-dark-light;
+}
+
+.datepicker-bottom-left,
+.datepicker-bottom-right {
+  border-bottom-color: $color-action;
+}
+
+.datepicker-bottom-left::before,
+.datepicker-bottom-right::before {
+  border-top-color: $color-action;
+}
+
+.datepicker-bottom-left::after,
+.datepicker-bottom-right::after {
+  border-top-color: $color-dark-light;
+}
+
+.datepicker-panel > ul > li {
+  background-color: $color-dark-light;
+}
+
+.datepicker-panel > ul > li:hover {
+  background-color: lighten( $color-action, 20% );
+  color: $color-dark-deep;
+}
+
+.datepicker-panel > ul > li.muted,
+.datepicker-panel > ul > li.muted:hover {
+  color: lighten( $color-dark-deep, 30% );
+}
+
+.datepicker-panel > ul > li.highlighted {
+  background: $color-dark-light;
+  color: $color-action;
+}
+
+.datepicker-panel > ul > li.highlighted:hover {
+  background: $color-dark-light;
+  color: $color-action;
+}
+
+.datepicker-panel > ul > li.picked,
+.datepicker-panel > ul > li.picked:hover {
+  background-color: lighten( $color-action, 30% );
+  color: $color-dark-deep;
+}
+
+.datepicker-panel li.highlighted.picked {
+  background: $color-dark-light;
+  color: $color-action;
+}
+
+.datepicker-panel > ul[data-view="week"] > li,
+.datepicker-panel > ul[data-view="week"] > li:hover {
+  background-color: $color-dark-light;
+}
+
+.datepicker-inline li {
+  color: $lights-color;
+}

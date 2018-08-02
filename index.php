@@ -12,7 +12,8 @@ if ( have_posts() ) :
     array_push($data['posts'], array(
       'permalink' => get_permalink(),
       'title' => get_the_title(),
-      'excerpt' => get_the_excerpt()
+      'excerpt' => get_the_excerpt(),
+      'thumbnail' => get_the_post_thumbnail()
     ));
 
   endwhile;

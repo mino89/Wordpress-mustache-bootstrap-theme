@@ -1,0 +1,311 @@
+#TA_selfserveprop137 {
+    width: 100%;
+}
+
+
+.widSSPBranding {
+    display: none;
+}
+
+.widSSPH18 {
+    display: none !important;
+}
+
+.widSSPAll {
+    display: none;
+}
+
+#CDSWIDSSP {
+    width: 100% !important;
+    .widSSPData{
+        background-color:transparent !important;
+    }
+}
+
+#CDSWIDSSP .widSSPData .widSSPTrvlRtng .widSSPOverall .ui_bubble_rating {
+    font-size: 20px;
+    margin: .5em 0;
+}
+
+.trip-advisor-box{
+    border: 1px solid $color-trip-advisor;
+    border-radius: $border-radius-size;
+    background: $color-trip-advisor-light;
+    padding: 1em; 
+    .trip-logo{
+        max-width: 60%;
+        display: inline-block;
+    }
+    &.big{
+        border:none;
+        border-radius: 0;
+    }
+}
+
+.rounded-gradient-box{
+    border: 1px solid $card-bg-color;
+    @include gradient-directional($start-color:$lights-color, $end-color:$card-bg-color, $deg: 180deg);
+    border-radius: $border-radius-size;
+    padding: 1em; 
+    &.dark{
+       color: $lights-color;
+       border: 1px solid $color-dark-deep;
+       @include gradient-directional($start-color:$color-dark-light, $end-color:$color-dark-deep, $deg: 180deg); 
+    }
+}
+
+.collapseBox{
+    max-height: 10rem;
+    transition: all $timing;
+    overflow: hidden;
+    &.opened{
+        max-height: 100rem;
+    }
+}
+
+.bg_with_img{
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        max-width: 50%;
+        flex-shrink: 0;
+        margin-bottom: -6em;
+    }
+}
+
+.title-with-icon{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    img{
+        margin-right: 1em;
+    }
+}
+
+.itinerary-conatiner{
+    @include media-breakpoint-down(lg){
+        flex-direction: column;
+    }
+    align-items:flex-start;
+    align-content:flex-start;
+    align-self:stretch;
+
+    .itinerary-el{
+        text-align: center;
+        @include media-breakpoint-down(lg){
+            flex-basis: auto;
+            display: flex;
+            text-align: left;
+            align-items: center;
+            z-index: 1;
+        }
+        position:relative;
+        &::before{
+            
+            content: '';
+            display: block;
+            height: 1.5rem;
+            width: 1.5rem;
+            background: $color-dark-light;
+            border: 1px solid $color-action;
+            border-radius: 100%;
+            margin:0 auto;
+        }
+        &::after{
+            content: '';
+            height: 1px;
+            border: 1px solid $color-dark-light;
+            width: 100%;
+            position: absolute;
+            left:50%;
+            top: .75rem;
+            z-index: -1;
+            @include media-breakpoint-down(lg){
+                left:1.6rem;
+                top: 50%;
+                height: 100%;
+                width: 1px;
+            }
+        }
+        &:last-child{
+            &::after{
+                content:none;
+                @include media-breakpoint-down(lg){
+                    content: '';
+                    border:none;
+                    width:4em;
+                    left: 0;
+                    top: auto;
+                    bottom:0;
+                    background:$lights-color;
+                    z-index: -1;
+                    height:50%;
+                }
+            }
+            
+        }
+        
+        .itinerary-content{
+            flex: 1;
+            @include media-breakpoint-down(lg){
+                margin-left: 1em;
+            }
+        }
+        .itinerary-step-hours{
+            @include media-breakpoint-up(lg){
+                margin-top: 1rem;
+                display: block;
+            }
+            font-size: 1.5rem;
+            font-family: $alt-font-family;
+        }
+        .itinerary-step-title{
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .itinerary-step-text{
+            font-size: .85rem;
+            margin-bottom: 1.5rem;
+        }    
+    }
+
+}
+
+.make-a-booking{
+    position: fixed;
+    top: 25vh;
+    max-height: 55vh;
+    right: -16rem;
+    display: flex;
+    background: $color-dark-light;
+    padding: .5rem;
+    transition: all $timing;
+    z-index: 2;
+    cursor: pointer;
+   
+    &:hover{
+        right: 0;
+    }
+    .make-a-booking-label{
+ 
+        b{
+   
+transform: rotate(-90deg);
+    border-radius: 5px 5px 0px 0px;
+    white-space: nowrap;
+    font-size: 1.5rem;
+    background: $color-action;
+    color: $lights-color;
+    position: absolute;
+    padding: .5em;
+    top: 40%;
+    left: -5.8rem;
+        }
+
+    }
+    .make-a-booking-area{
+       width: 15rem; 
+       overflow-y: auto;
+       padding: .5em 1em;
+    }
+}
+
+.deco-img{
+    position: relative;
+    &:before{
+        content:'';
+        height: 60%;
+        width: 90%;
+        bottom: -1rem;
+        left: -1rem;
+        border: 1px solid $color-action;
+        position: absolute;
+        z-index: -1;
+    }
+    &.alt{
+       
+        &:before{
+            left: auto; 
+            bottom: -3rem;
+            right: -1rem;
+            height:70%;
+            border-color: $color-dark-light;
+        }
+    }
+    img{
+        margin: 2rem;
+        width: calc(100% - 4rem);
+    }
+}
+
+.bg-text{
+    padding: 1rem; 
+    background: $lights-color;
+}
+
+@include media-breakpoint-down(sm){
+    .invert_mobile{
+        flex-direction: column-reverse;
+    }
+}
+
+.vertical-center{
+    display: flex;
+    *{
+        align-self: center;
+    }
+}
+
+.carousel-control-next, .carousel-control-prev{
+    background: transparent;
+    color:$color-action;
+
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon{
+        background-image: none !important;
+}
+.carousel{
+    padding:1em;
+}
+
+.carousel-inner{
+    .card{
+        .overlay{
+           align-items:center; 
+        }
+        .cta{
+            text-align: center;
+        }
+    }
+}
+
+.cookie-box{
+    position: fixed;
+    bottom:0;
+    z-index: 100;
+    padding: 1rem;
+    background: rgba($color-primary, 0.8);
+    transition: all $timing * 2;
+    display: none;
+    bottom: -100vh;
+    p{
+        flex: 1;
+    }
+    @include media-breakpoint-down(sm){
+        flex-direction: column;
+    }
+    &.visible{
+        display: flex;
+    }
+    &.show-swipe{
+        bottom: 0;
+    }
+    &.hide-swipe{
+        bottom: -100vh;
+    }
+}
+

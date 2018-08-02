@@ -1,0 +1,18 @@
+a{
+    text-decoration: none;
+}
+
+textarea, input, button { outline: none; }
+
+.block-scroll{
+    overflow: hidden;
+    height: 100%;
+}
+select, input{
+    max-width: 100%;
+}
+
+body{
+    overflow-x:hidden;
+    background: $lights-color;
+}

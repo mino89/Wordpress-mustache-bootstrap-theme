@@ -15,6 +15,9 @@ function show_template() {
   }
 }
 
+// theme options 
+add_theme_support('post-thumbnails'); 
+
 // function getPages() {
 //
 //   $pages = array();

@@ -1,25 +1,8 @@
 /*
-  Theme Name: cjonasw-MustachePHP-Example
-  Theme URI: https://github.com/cjonasw/
-  Description: cjonasw-MustachePHP-Example
+  Theme Name: Wordpress-mustache-bootstrap-theme
+  Theme URI: https://github.com/mino89/Wordpress-mustache-bootstrap-theme
+  Description: starting theme with bootstrap and mustache
   Version: 1
-  Author: Charlie Walter
-  Author URI: http://www.charliejwalter.net
+  Author: Pierdomenico Reitano
+  Author URI: https://pierdomenicoreitano.it
 */
-
-body{
-  background: whitesmoke;
-  color: grey;
-}
-
-body:after{
-  content: "{{mustache}}";
-}
-
-a{
-  color: grey;
-}
-
-.pagination{
-  margin-top: 1em;
-}

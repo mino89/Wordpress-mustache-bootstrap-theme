@@ -1,0 +1,105 @@
+img{
+    max-width: 100%;
+    width: 100%;
+}
+
+.circle-image{
+    display: flex;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center; 
+    overflow: hidden;
+    height: 12em;
+    width: 12em;
+    border: 1px solid $card-border-color;
+}
+
+.icon{
+       background-position: center;
+       background-size: contain;
+       background-repeat: no-repeat;
+    display: inline-block;
+    &__sm{
+        max-width: 1em;
+        max-height: 1em;
+    }
+    &__md{
+        width: 2em;
+        height: 2em;
+    }
+    &.i{
+        &_{
+            background-image: url("../../assets/new-assets/Icone/Pagina_tour/ellipse.svg");
+        }
+        &_ellipse{
+            background-image: url("../../assets/new-assets/Icone/Pagina_tour/ellipse.svg");
+        }
+        &_000{
+            background-image: url("../../assets/new-assets/Icone/Pagina_tour/000.svg");
+        }
+        &_air-conditioning{
+            background-image: url("../../assets/new-assets/Icone/Pagina_tour/air-conditioning.svg");
+        }
+        &_champagne-2{
+            background-image: url("../../assets/new-assets/Icone/Pagina_tour/champagne-2.svg");
+        }
+        &_coin{
+            background-image: url("../../assets/new-assets/Icone/Pagina_tour/coin.svg");
+        }
+        &_difficulty{
+            background-image: url("../../assets/new-assets/Icone/Pagina_tour/difficulty.svg");
+        }
+        &_driver{
+            background-image: url("../../assets/new-assets/Icone/Pagina_tour/driver.svg");
+        }
+        &_duration{
+            background-image: url("../../assets/new-assets/Icone/Pagina_tour/duration.svg");
+        }
+        &_durations{
+            background-image: url("../../assets/new-assets/Icone/Pagina_tour/durations.svg");
+        }
+        &_ipad{
+            background-image: url("../../assets/new-assets/Icone/Pagina_tour/ipad.svg");
+        }
+        &_personalservice{
+            background-image: url("../../assets/new-assets/Icone/Pagina_tour/personalservice.svg");
+        }
+        &_price{
+            background-image: url("../../assets/new-assets/Icone/Pagina_tour/price.svg");
+        }
+        &_rest{
+            background-image: url("../../assets/new-assets/Icone/Pagina_tour/rest.svg");
+        }
+        &_restricted{
+            background-image: url("../../assets/new-assets/Icone/Pagina_tour/restricted.svg");
+        }
+        &_rich{
+            background-image: url("../../assets/new-assets/Icone/Pagina_tour/rich.svg");
+        }
+        &_wifi{
+            background-image: url("../../assets/new-assets/Icone/Pagina_tour/wifi.svg");
+        }
+        &_wine{
+            background-image: url("../../assets/new-assets/Icone/Pagina_tour/wine.svg");
+        }
+        &_boat{
+            background-image: url("../../assets/new-assets/Icone/Pagina_tour/boat_tour.svg");
+        }
+        &_pickup{
+            background-image: url("../../assets/new-assets/Icone/Pagina_tour/hotel_pickup.svg");
+        }
+        &_parkticket{
+            background-image: url("../../assets/new-assets/Icone/Pagina_tour/park_ticket.svg");
+        }
+        &_train{
+            background-image: url("../../assets/new-assets/Icone/Pagina_tour/train.svg");
+        }
+        &_water{
+            background-image: url("../../assets/new-assets/Icone/Pagina_tour/water_bottle.svg");
+        }
+        &_wineries{
+            background-image: url("../../assets/new-assets/Icone/Pagina_tour/wineries.svg");
+        }
+    }
+
+}

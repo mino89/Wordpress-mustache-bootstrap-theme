@@ -1,0 +1,57 @@
+footer{
+    background: $color-dark;
+    color: $lights-color;
+    h4{
+        margin-bottom: 1em;
+    }
+    a{
+        color: $lights-color;
+        transition: opacity $timing;
+        &:hover{
+            opacity: 0.6;
+        }
+    }
+    ul{
+        line-height: 1.5rem;
+    }
+    .icons-list{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        li{
+            flex: 1;
+            padding: .5rem;
+        }
+    }
+    .newsletter-subscribe{
+        background: $color-dark-light;
+        display: flex;
+        border-radius: 10em;
+        overflow: hidden;
+        input{
+            background: none;
+            border:none;
+            color: $lights-color;
+            padding: 1rem;
+            flex:1;
+        }
+        button{
+            padding:0;
+            background: transparent;
+            border: none;
+            transition: opacity $timing;
+            cursor: pointer;
+            &:hover{
+                opacity: 0.8;
+            }
+        }
+        img{
+            height: 100%;
+            max-width: 3rem;
+        }
+    }
+    .sub-footer{
+        background: $color-dark-deep;
+    }
+}

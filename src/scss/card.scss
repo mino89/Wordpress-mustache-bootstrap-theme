@@ -1,0 +1,123 @@
+.card{
+    @include gradient-directional($start-color:$lights-color, $end-color:$card-bg-color, $deg: 180deg);
+    overflow: hidden;
+    border-radius: $border-radius-size;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 1rem);
+    border: 1px solid $card-bg-color;
+    margin-bottom: 1rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    img{
+        flex-shrink: 0;
+        max-height: 270px;
+
+    }
+    .overlay{
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        p{
+            height: 0;
+            margin: 0;
+            @include invisible(hidden);
+            @include media-breakpoint-up(md){
+                 height: auto;
+                 margin: .5em 0;
+                 @include invisible(visible);
+            }
+        }
+
+    }
+    .cta{
+        padding: 0 1rem 1rem;
+        margin-top: auto;
+    }
+    h1{
+        font-size: 1.25rem;
+        font-family: $primary-font-family;
+        font-weight: 700;
+        line-height: 1em;
+        margin-bottom: .5rem;
+    }
+    h3{
+        font-size: 1.75em;
+        font-weight: 700;
+    }
+    h4{
+        font-weight: 700;
+    }
+    h5{
+        font-size: 1.25em;
+        font-weight: 400;
+        font-family: $alt-font-family;
+    }
+    @include media-breakpoint-up(md){
+        
+    }
+    &.autoheight{
+        height: auto;
+    }
+    &.with-padding{
+        padding: 1em;
+        h5{
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+    }
+    &.desaturate{
+        *{
+            color: lighten($color:#000, $amount: 60%);
+        }
+    }
+    &.transparent{
+        opacity: 0.6;
+    }
+    label{
+        display: block;
+        margin-bottom: .25em;
+    }
+    input, select{
+        width: 100%;
+        margin: .5rem 0;
+    }
+
+    a{
+        color: $color-action;
+    }
+    .action_primary{
+        color: $lights-color;
+        &:hover{
+            color: $color-dark-light;
+        }
+    }
+    b{
+        font-weight:700;
+    }
+}
+
+.transparent-card{
+    h1{
+        font-size: 1.25rem;
+    }
+    h2{
+        font-size: 1rem;
+    }
+}
+
+.heading-card{
+    background: adjust-color($lights-color, $alpha: -0.3);
+    padding: 1rem;
+    color: $color-dark-light;
+    border-radius: 2rem 2rem 0 0;
+    h2{
+        padding:0;
+        margin:0;
+    }
+    h3{
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+}

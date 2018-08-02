@@ -1,0 +1,12 @@
+.title-line{
+    display: flex;
+    width:100%;
+    align-items: center;
+    &::after{
+        content:"";
+        height: 1px;
+        background: $color-dark;
+        flex: 1;
+        margin-left: 1rem;
+    }
+}

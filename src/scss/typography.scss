@@ -1,0 +1,90 @@
+body{
+    font-family: $primary-font-family;
+    color:  $color-dark !important;
+}
+
+h1{
+    font-family: $alt-font-family;
+    font-size: 2rem;
+    line-height: 1.5em;
+    &.x_2{
+        font-size: 3.5rem;
+        font-weight: 700;
+    }
+}
+
+h2{
+    font-family: $alt-font-family;
+    font-size: 2rem;
+    line-height: 1.5em;
+}
+
+h4{
+    font-family: $alt-font-family;
+    font-size: 1.175rem;
+    line-height: 1.5em;
+}
+
+h5{
+    font-family: $alt-font-family;
+    font-size: 1.15rem;
+    line-height: 1.5em;
+}
+
+p{
+    line-height: 1.25em;
+    margin: .5em 0;
+}
+
+.underline{
+    text-decoration: underline;
+}
+strong{
+    font-weight: 700;
+}
+.text-center{
+    text-align: center;
+}
+
+.text-right{
+    text-align: right;
+}
+
+em{
+    font-style: italic;
+}
+@include media-breakpoint-down(md){
+    .text-center-md-max{
+        text-align: center;
+    }
+}
+.list-inline{
+    display: flex;
+    flex-wrap: wrap;
+    li{
+        padding: .5em;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+
+}
+hr{
+    width: 100%;
+    border-color: $color-dark-light;
+    border: 1px solid;
+}
+
+ul{
+    li{
+        margin: .5em 0;
+    }
+}
+
+a{
+    color:$color-action;
+}
+
+.small{
+    font-size: .65em;
+}
