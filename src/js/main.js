@@ -1,9 +1,8 @@
-//import '../../node_modules/jquery/dist/jquery.js'
-//import '../../node_modules/@fengyuanchen/datepicker/dist/datepicker.js'
-//import '../../node_modules/blueimp-gallery/js/blueimp-gallery.js'
-//import '../../node_modules/bootstrap/js/dist/util.js'
-//import '../../node_modules/bootstrap/js/dist/carousel.js'
-//import 'scrollLock.js'
+import '../../node_modules/jquery/dist/jquery.js'
+import '../../node_modules/bootstrap/js/dist/util.js'
+import '../../node_modules/bootstrap/js/dist/carousel.js'
+import "../scss/styles.scss"
+// import 'scrollLock.js'
 // global variables
 var headerHeight;
 var scrollDistance;

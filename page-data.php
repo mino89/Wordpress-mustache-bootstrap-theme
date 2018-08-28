@@ -6,7 +6,7 @@ $data = array(
   'wp_footer' => output_buffer_contents(wp_footer),
 
   'template_directory_uri' => get_template_directory_uri(),
-  'stylesheet_url' => get_template_directory_uri().'/build/css/styles.css',
+  'stylesheet_url' => get_template_directory_uri().'/build/style.min.css',
   'home_url' => esc_url( home_url( '/' ) ),
   'blog_title' => get_bloginfo(),
 
