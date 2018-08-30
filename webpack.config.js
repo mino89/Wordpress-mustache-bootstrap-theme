@@ -1,26 +1,19 @@
-'use strict'
+// webpack v4
 const path = require('path');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 module.exports = {
-  mode: 'production',
   watchOptions: {
     aggregateTimeout: 300,
-    poll: 100,
+    poll: 1000
   },
+  entry: { main: './src/js/main.js' },
   output: {
-    path: path.resolve('./build'),
+    path: path.resolve(__dirname, 'build'),
     filename: 'scripts.js'
-  },
-  entry: [
-    './src/js/main.js'
-  ],
-  stats: {
-    assets: true,
-    builtAt: true,
-    warnings: true
   },
   optimization: {
     minimizer: [
@@ -34,40 +27,22 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(scss)$/,
-        use: [{
-          loader: 'style-loader', // inject CSS to page
-        }, 
-        {
-          loader:  MiniCssExtractPlugin.loader
-        },
-        {
-          loader: 'css-loader',
-          options: {
-            url: false,
-            minimize: true
-          } // translates CSS into CommonJS modules
-        },
-        {
-          loader: 'sass-loader' // compiles Sass to CSS
-        }
-      ]
-      },
-      {
-        test: /\.(js)$/,
+        test: /\.js$/,
         exclude: /node_modules/,
         use: {
-            loader: "babel-loader",
-            options: {
-              presets: ['@babel/preset-env']
-            }
+          loader: "babel-loader"
         }
+      },
+      {
+        test: /\.s[c|a]ss$/,
+        use: ['style-loader', MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader']
       }
     ]
   },
   plugins: [
+    new CleanWebpackPlugin('build', {}),
     new MiniCssExtractPlugin({
       filename: 'style.min.css',
-    })
+    }),
   ]
-}
+};
